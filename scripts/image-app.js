@@ -26,15 +26,15 @@
     // Requires script name as input
     var myWorker = new Worker("worker.js");
     // sending messages to and from dedicated worker
-    first.onchange = function() {
-      myWorker.postMessage([first.value,second.value]);
-      console.log('Message posted to worker');
-    }
+    //first.onchange = function() {
+    //  myWorker.postMessage([first.value,second.value]);
+    //  console.log('Message posted to worker');
+    //}
 
-    secound.onchange = function() {
-      myWorker.postMessage([first.value,second.value]);
-      console.log('Message posted to worker');
-    }
+    //secound.onchange = function() {
+    //  myWorker.postMessage([first.value,second.value]);
+    //  console.log('Message posted to worker');
+    //}
   }
   
   // greys out the buttons while manipulation is happening

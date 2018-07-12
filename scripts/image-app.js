@@ -5,6 +5,8 @@
   imageLoader.addEventListener('change', handleImage, false);
   var canvas = document.querySelector('#image');
   var ctx = canvas.getContext('2d');
+  
+  var imageWorker = new Worker('scripts/worker.js');
 
   function handleImage(e){
     var reader = new FileReader();
@@ -19,22 +21,6 @@
       img.src = event.target.result;
     }
     reader.readAsDataURL(e.target.files[0]);
-  }
-
-  //my webworker check if Browser supports the Worker api
-  if (window.Worker) {
-    // Requires script name as input
-    var myWorker = new Worker("worker.js");
-    // sending messages to and from dedicated worker
-    //first.onchange = function() {
-    //  myWorker.postMessage([first.value,second.value]);
-    //  console.log('Message posted to worker');
-    //}
-
-    //secound.onchange = function() {
-    //  myWorker.postMessage([first.value,second.value]);
-    //  console.log('Message posted to worker');
-    //}
   }
   
   // greys out the buttons while manipulation is happening

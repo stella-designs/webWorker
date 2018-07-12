@@ -1,7 +1,5 @@
 importScripts('imageManips.js');
 
-console.log('Web worker is running..');
-
 this.onmessage = function(e) {
   var imageData = e.data.imageData;
   var type = e.data.type;

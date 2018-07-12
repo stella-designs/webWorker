@@ -7,4 +7,4 @@ Migrate Long Running JS onto a Web Worker
 
 Working on the quiz? Start by examining index.html and the JavaScript files linked inside it.
 
-### [View Page] (https://websiteartist.github.io/webWorker/)
+### [View Page](https://websiteartist.github.io/webWorker/)

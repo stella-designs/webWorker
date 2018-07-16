@@ -58,6 +58,11 @@
       };
       throw new WorkerException('Worker error.')
     };
+  };
+
+  function revertImage() {
+    return  ctx.putImageData(original, 0, 0);
+  }
 
   document.querySelector('#invert').onclick = function() {
     manipulateImage("invert");
